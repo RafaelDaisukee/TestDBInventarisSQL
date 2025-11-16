@@ -1,0 +1,15 @@
+# Konfigurasi IDE
+.vscode/
+
+# Dependencies dan hasil kompilasi Maven
+target/
+
+# Konfigurasi lokal
+.env
+
+# File yang mungkin dihasilkan oleh IDE/OS (Tambahan umum)
+*.log
+*.class
+
+# File dependencies yang mungkin disimpan secara lokal
+lib/  <-- Hapus tanda pagar jika Anda yakin ingin mengabaikannya

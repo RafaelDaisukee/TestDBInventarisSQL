@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+
+
+
+<BorderPane xmlns="http://javafx.com/javafx/17"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.openjfx.controller.InventoryController">
+
+    <top>
+        <ToolBar>
+            <Button text="Refresh" onAction="#onRefresh"/>
+            <Button text="Tambah" onAction="#onAdd"/>
+            <Button text="Edit" onAction="#onEdit"/>
+            <Button text="Hapus" onAction="#onDelete"/>
+            <Region HBox.hgrow="ALWAYS"/>
+            <Label text="Cari:"/>
+            <TextField fx:id="searchField" promptText="Nama atau kategori" onKeyReleased="#onSearch"/>
+        </ToolBar>
+    </top>
+
+    <center>
+        <TableView fx:id="tableInventory">
+            <columns>
+                <TableColumn fx:id="colId" text="ID" prefWidth="60"/>
+                <TableColumn fx:id="colNama" text="Nama Barang" prefWidth="200"/>
+                <TableColumn fx:id="colKategori" text="Kategori" prefWidth="150"/>
+                <TableColumn fx:id="colJumlah" text="Jumlah" prefWidth="90"/>
+                <TableColumn fx:id="colKondisi" text="Kondisi" prefWidth="120"/>
+                <TableColumn fx:id="colLokasi" text="Lokasi" prefWidth="140"/>
+                <TableColumn fx:id="colTanggal" text="Tanggal Input" prefWidth="140"/>
+            </columns>
+        </TableView>
+    </center>
+
+    <padding>
+        <Insets top="8" right="8" bottom="8" left="8"/>
+    </padding>
+</BorderPane>
